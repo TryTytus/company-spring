@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: company-spring
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/company
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+
+openapi:
+  oauth:
+    tokenUrl: http://localhost:8080/realms/company/protocol/openid-connect/token
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-id: company
+      username: adam
+      password: Benio111
+
+
+
+server:
+  port: 8081
