@@ -6,8 +6,6 @@ services:
     depends_on:
       - postgres
       - keycolak
-    environment:
-      - SPRING_PORT:8082
   postgres:
     image: 'postgres:latest'
     environment:
