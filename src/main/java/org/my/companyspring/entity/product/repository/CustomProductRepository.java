@@ -1,5 +1,6 @@
 package org.my.companyspring.entity.product.repository;
 
+import org.my.companyspring.entity.order.Order;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.criteria.*;

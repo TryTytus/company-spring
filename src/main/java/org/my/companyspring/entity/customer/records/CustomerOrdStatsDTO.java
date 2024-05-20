@@ -5,6 +5,6 @@ public record CustomerOrdStatsDTO(
         String firstName,
         String lastName,
         Long totalOrders,
-        Long totalQuantity,
+        Integer totalQuantity,
         Double averageDiscount
 ) {}
