@@ -10,9 +10,10 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter;
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 @SecurityScheme(
         name = "bearerAuth",
         description = "JWT authentication, use default:(client_id=company,username=adam,password=adam,request body)",

@@ -6,7 +6,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/company
+          issuer-uri: http://keycloak:8080/realms/company
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
   jpa:
     show-sql: true
@@ -14,7 +14,7 @@ spring:
       ddl-auto: create-drop
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/mydatabase
+    url: jdbc:postgresql://postgres:5432/mydatabase
     username: myuser
     password: secret
 
@@ -27,8 +27,6 @@ springdoc:
   swagger-ui:
     oauth:
       client-id: company
-      username: adam
-      password: Benio111
 
 
 
